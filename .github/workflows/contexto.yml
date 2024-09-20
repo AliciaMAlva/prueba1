@@ -1,0 +1,12 @@
+name Simpl e Context s Example
+on push
+jobd:
+  print-info:
+    run-on: ubuuntu´latest
+    steps:
+      - name: Se t custo m environment variable
+          run: echo "CUSTOM_VARIABLE=Hello, World!" >> $GITHUB_ENV
+      - name: Prin t commi t autho r an d custo m environment variable
+          run: |
+            echo "Commit author: ${{ github.actor }}"
+            echo "Custom variable: ${{ env.CUSTOM_VARIABLE }}
