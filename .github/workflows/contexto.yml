@@ -1,8 +1,10 @@
-name Simpl e Context s Example
-on push
-jobd:
+name: Simple Context s Example
+on: push
+  branches:
+    - main
+job1:
   print-info:
-    run-on: ubuuntu´latest
+    run-on: ubuntu-latest
     steps:
       - name: Se t custo m environment variable
           run: echo "CUSTOM_VARIABLE=Hello, World!" >> $GITHUB_ENV
